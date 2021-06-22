@@ -1,0 +1,33 @@
+﻿@using System.Data
+@model DataTable
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <th>EmployeeId1</th>
+            <th>EmployeeId2</th>
+            <th>ProjectId</th>
+            <th>Days Worked</th>
+        </tr>
+        @foreach (DataRow row in Model.Rows)
+        {
+        <tr>
+            <td>@row["Employee1"]</td>
+            <td>@row["Employee2"]</td>
+            <td>@row["ProjectId"]</td>
+            <td>@row["DaysWork"]</td>
+        </tr>
+        }
+    </table>
+</body>
+</html>

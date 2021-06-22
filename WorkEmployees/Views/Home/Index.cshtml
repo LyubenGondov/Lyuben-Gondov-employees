@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p class="small">Welcome to employees project. Please browse and upload a .txt files.</p><br />
+    <p class="small" style="color:red">@(ViewBag.Message != null ? ViewBag.Message : "")</p>
+</div>
+<div>
+    <form asp-controller="Home" asp-action="UploadFile" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept=".txt" /><br /><br />
+        <button type="submit" id="button">Save file</button>       
+    </form>
+    
+</div>
